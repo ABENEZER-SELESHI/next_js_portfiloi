@@ -13,7 +13,7 @@ function BurgerMenu({
   if (open) {
     return (
       <div className="fixed inset-0 bg-black/30 z-50">
-        <div className="absolute top-0 right-0 bottom-0 p-4 bg-white w-3/4 flex flex-col gap-4">
+        <div className="absolute top-0 right-0 bottom-0 p-4 bg-black w-3/4 flex flex-col gap-4">
           <div
             className="w-full flex items-center justify-center mb-4 backdrop-blur-lg"
             onClick={() => setOpen(false)}

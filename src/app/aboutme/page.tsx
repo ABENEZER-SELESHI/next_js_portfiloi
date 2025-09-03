@@ -4,7 +4,7 @@ const AboutmePage = () => {
       <h1 className="text-3xl font-bold border-white border-[3px] rounded p-3">
         ABOUT ME
       </h1>
-      <p className="font-[lato]">
+      <p className="font-[lato] text-2xl">
         My name is Abenezer Seleshi, and I am a passionate software engineering
         student at ASTU with a strong interest in programming. I love the
         process of problem-solving through code and constantly seek to improve
