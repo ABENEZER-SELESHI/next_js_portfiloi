@@ -1,3 +1,4 @@
+// src/app/projects/page.tsx
 import { DiNodejs } from "react-icons/di";
 import { SiExpress, SiMongodb } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";

@@ -1,3 +1,4 @@
+// src/app/components/BackendProjectCard.tsx
 import { ReactNode } from "react";
 import { FaGithub } from "react-icons/fa";
 
@@ -6,7 +7,6 @@ interface BackendProjectProps {
   info: string;
   pdfLink: string;
   isComplete: boolean;
-  teck: string[];
   children: ReactNode;
 }
 
@@ -15,24 +15,10 @@ const BackendProjectCard = ({
   info,
   pdfLink,
   isComplete,
-  teck,
   children,
 }: BackendProjectProps) => {
   return (
     <div className="grid grid-cols-1 gap-4 items-center justify-center p-6 w-9/10 border-2 border-blue-500 rounded-2xl">
-      <div className="flex justify-between">
-        <div className="flex items-center gap-1">
-          <FaGithub className="text-3xl md:text-4xl" />
-          <h1 className="text-3xl md:text-4xl font-bold">{title}</h1>
-        </div>
-        <h2
-          className={`flex p-1.5 rounded-3xl items-center items-self-end ${
-            isComplete ? "bg-green-600" : "bg-gray-800"
-          }`}
-        >
-          {isComplete ? "Complete" : "In Progress"}
-        </h2>
-      </div>
       <div className="flex flex-col items-start justify-start pt-0 w-full gap-3 md:gap-5">
         <p className="text-2xl font-medium">{info}</p>
         {/* used Tech stacks */}
@@ -46,6 +32,17 @@ const BackendProjectCard = ({
           <FaGithub />
           <span>View Repo</span>
         </a>
+      </div>
+
+      {/* Status badge (moved to bottom like ProjectCard) */}
+      <div className="flex w-full justify-end">
+        <h2
+          className={`flex p-1.5 rounded-3xl items-center items-self-end ${
+            isComplete ? "bg-green-600" : "bg-gray-800"
+          }`}
+        >
+          {isComplete ? "Complete" : "In Progress"}
+        </h2>
       </div>
     </div>
   );
